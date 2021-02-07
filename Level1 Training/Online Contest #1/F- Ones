@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+  int n;
+  cin >> n;
+  // convert the nuber to binary
+  // dicimal  binary
+  //   5       101
+  //   8       10000
+
+  int counter = 0;
+  while( n>0 ){
+
+    if(n % 2 == 1) // the remainder of division n/2
+      counter++;
+
+    n = n /2; // every step divide n to be n/2
+  }
+
+  cout << counter ;
+
+
+	return 0;
+} 
