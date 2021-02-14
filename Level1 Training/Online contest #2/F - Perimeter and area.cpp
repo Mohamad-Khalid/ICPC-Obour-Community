@@ -4,9 +4,9 @@ using namespace std;
 
 int main(){
 
-  long long n ;
-  cin >> n;
-  cout << n-1;
+  long long a,b;
+  cin >> a>>b;
+  cout << 2*(a+b) <<" "<< a*b;
 
 	return 0;
 } 
