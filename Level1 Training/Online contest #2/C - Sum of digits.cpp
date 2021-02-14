@@ -4,19 +4,24 @@ using namespace std;
 
 int main(){
 
-  int n ;
-  cin >> n;
-  int A[n]; // array
 
-  int sum = 0;
 
-  for(int i=0 ; i< n;i++){
-    cin >> A[i];
-    sum = sum + A[i];
-  }
+ int t;
+ cin >> t;
+ for(int i = 1;i<= t;i++){
 
-  cout << sum <<endl;
+    int n ;
+    cin >> n;
 
+    int sum =0;
+    // 123
+    while(n>0){
+      sum = sum + (n%10);
+      n = n / 10;
+    }
+    cout << sum << endl ;
+
+ }
 
 
 	return 0;
