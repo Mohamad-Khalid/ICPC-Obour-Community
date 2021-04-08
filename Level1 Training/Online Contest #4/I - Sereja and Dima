@@ -1,0 +1,55 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+const int N = 1e5+4;
+
+int A[N];
+
+int main(){
+  
+  int n;
+  cin >> n;
+  for(int i=0;i<n;i++){
+    cin >> A[i];
+  }
+
+
+  int start=0 , end = n-1 ;
+  int player1=0, player2=0;
+
+  while(start <= end){
+
+    // playar 1 
+    if(A[start] > A[end]){
+      player1+=A[start];
+      start++;
+    }
+    else{
+      player1+=A[end];
+      end--;
+    }
+     
+    // to make sure that the player2 can play 
+    // if he can't then the game finish
+    if(start > end){
+      break;
+    }
+
+    // player 2
+    if(A[start] > A[end]){
+      player2+=A[start];
+      start++;
+    }
+    else{
+      player2+=A[end];
+      end--;
+    }
+  }
+
+  cout << player1<<" "<<player2;
+
+
+  return 0;
+} 
