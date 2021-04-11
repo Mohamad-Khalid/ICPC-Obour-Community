@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+
+  int n;
+  cin >> n;
+
+  int canBuy=0;
+  for(int i=0; i<n ; i++){
+    int toys;
+    double cost;
+    cin >> toys >>  cost;
+    if(cost < 50){
+      canBuy += toys;
+    }
+  }
+  
+  cout << canBuy;
+  
+ 
+  return 0;
+} 
