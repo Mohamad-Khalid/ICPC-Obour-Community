@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+
+int main(){
+
+ int a,b;
+ cin >> a >> b;
+ int numberOfPalendromNumbers=0;
+ for(int i=a ; i<= b ; i++){
+
+  int k =i;
+  int j=0;
+  while(k){
+    j*=10;
+    j+= k%10;
+    k/=10;
+  }
+  if(i==j)
+    numberOfPalendromNumbers++;
+ }
+ cout << numberOfPalendromNumbers;
+  
+  return 0;
+} 
