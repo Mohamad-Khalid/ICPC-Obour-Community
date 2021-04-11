@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+
+int a[200];
+
+int main(){
+
+  int n;
+  cin >> n;
+  for(int i=0; i<n ; i++)
+    cin >> a[i];
+
+  int k = n;
+  int Alice=0,Bob=0;
+  while(k>0){
+    //player 1 search for the max
+    int M=0;
+    for(int i=0; i<n ; i++){
+      if(a[i] >a[M] )
+        M =i;
+    }
+    Alice+=a[M];
+    a[M]=0;
+    k--;
+
+    M=0;
+    for(int i=0; i<n ; i++){
+      if(a[i] >a[M] )
+        M =i;
+    }
+    Bob+=a[M];
+    a[M]=0;
+    k--;
+  }
+  cout << Alice-Bob;
+  
+  return 0;
+} 
